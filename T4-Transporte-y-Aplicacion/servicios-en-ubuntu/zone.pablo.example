@@ -1,0 +1,35 @@
+$TTL 1D
+@	IN	SOA	pabloA.pablo.example. administrador.pablo.example. (
+	1;	Serial
+	604800;	Refresh
+	86400;	Retry
+	2419200;Expire
+	10800);	Cache minimo
+
+; Servidores DNS
+	IN	NS	pabloA
+	IN	NS	pabloB
+
+; Hosts
+
+pabloA	IN	A	192.168.99.2
+pabloB	IN	A	192.168.99.3
+;dhcp1	IN	A	192.168.99.2
+;dhcp2	IN	A	192.168.99.3
+;ftp	IN	A	192.168.99.2
+;apache	IN	A	192.168.99.2
+;ca	IN	A	192.168.99.3
+
+; Alias
+
+dns1	IN	CNAME	pabloA
+dns2	IN	CNAME	pabloB
+
+dhcp1	IN	CNAME	pabloA
+dhcp2	IN	CNAME	pabloB
+
+www	IN	CNAME	apache
+ftp	IN	CNAME	pabloA
+apache	IN	CNAME	pabloA
+
+ca	IN	CNAME	pabloB
