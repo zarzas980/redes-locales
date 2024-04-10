@@ -14,5 +14,7 @@
 
 # On what interfaces should the DHCP server (dhcpd) serve DHCP requests?
 #	Separate multiple interfaces with spaces, e.g. "eth0 eth1".
-INTERFACESv4="enp0s8"
+
+#INDICAR LA TARJETA DE RED EN LA QUE ESTARÁ FUNCIONANDO EL DHCP. Ej: "enp0s8" ó "enp0s3" (con comillas)
+INTERFACESv4="<CAMBIAR>"
 INTERFACESv6=""

@@ -1,0 +1,20 @@
+$TTL 1D
+@	IN	SOA	server1.<TU DOMINIO CAMBIAR> administrador.<TU DOMINIO CAMBIAR> (
+	1;	Serial
+	604800;	Refresh
+	86400;	Retry
+	2419200;Expire
+	10800);	Cache minimo
+
+; SERVIDORES DNS DNS
+	IN	NS	server1
+
+; HOSTS
+; Ejemplo registro de host. OJO EL PUNTO AL FINAL DEL "com". Cambiar la IP por la IP de tu servidor. 
+server1.alicia.com.	IN	A	172.16.0.2
+
+
+; ALIAS
+; Ejemplo de como se escribe un alias
+; mail.alicia.com.	IN	CNAME	server5.alicia.com.
+
